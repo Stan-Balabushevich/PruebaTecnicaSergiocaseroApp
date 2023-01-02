@@ -1,4 +1,4 @@
-package id.slava.nt.pruebatecnicasergiocaseroapp.data.repository
+package id.slava.nt.pruebatecnicasergiocaseroapp.domain.repository
 
 import id.slava.nt.pruebatecnicasergiocaseroapp.data.database.PoiDbEntity
 import kotlinx.coroutines.flow.Flow

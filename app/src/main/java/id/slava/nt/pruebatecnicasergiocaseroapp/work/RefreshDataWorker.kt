@@ -16,7 +16,6 @@ class RefreshDataWorker(appContext: Context, params: WorkerParameters):
         val database = PoiDatabase.getInstance(applicationContext)
         val repository = PoiRepositoryImpl(database.noteDao)
 
-
         try {
 
             repository.refreshPoiList()
