@@ -19,5 +19,8 @@ interface PoiDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertListPoi(poiList: List<PoiDbEntity>)
 
+    @Query("select * from database_table_poi where title like '%' || :text|| '%' ")
+    fun getSearchTitle(text: String): Flow<List<PoiDbEntity>>
+
 
 }

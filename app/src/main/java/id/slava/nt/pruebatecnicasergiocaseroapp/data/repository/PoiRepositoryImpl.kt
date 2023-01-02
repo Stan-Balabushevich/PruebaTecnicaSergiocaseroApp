@@ -24,6 +24,10 @@ class PoiRepositoryImpl(private val poiDao: PoiDao): PoiRepository {
     override suspend fun getPoiById(id: Int): PoiDbEntity? =
         poiDao.getPoiById(id)
 
+    override fun getSearchTitle(searchText: String): Flow<List<PoiDbEntity>> =
+        poiDao.getSearchTitle(text = searchText )
+
+
     override suspend fun refreshPoiList() {
 
         withContext(defaultDispatcher){

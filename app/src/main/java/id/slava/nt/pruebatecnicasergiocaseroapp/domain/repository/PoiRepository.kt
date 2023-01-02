@@ -9,6 +9,8 @@ interface PoiRepository {
 
     suspend fun getPoiById(id: Int): PoiDbEntity?
 
+    fun getSearchTitle(searchText: String): Flow<List<PoiDbEntity>>
+
     suspend fun refreshPoiList()
 
 
