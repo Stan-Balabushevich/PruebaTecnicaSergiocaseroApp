@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import id.slava.nt.pruebatecnicasergiocaseroapp.data.database.PoiDbEntity
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class MainPoiListData (
 
