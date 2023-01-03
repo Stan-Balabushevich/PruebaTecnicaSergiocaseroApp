@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class DetailPoiViewModel(
-    private val savedStateHandle: SavedStateHandle,
+    savedStateHandle: SavedStateHandle,
     private val poiUseCases: PoiUseCases): ViewModel() {
 
    private val _poiState = MutableStateFlow(PoiDbEntity(title = "", coordinates = "", imageUrl = ""))
