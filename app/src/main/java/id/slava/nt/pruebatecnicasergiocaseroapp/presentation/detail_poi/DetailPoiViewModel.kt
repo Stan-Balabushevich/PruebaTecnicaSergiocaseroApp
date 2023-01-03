@@ -21,12 +21,12 @@ class DetailPoiViewModel(
        savedStateHandle.get<Int>("poiId")?.let { id ->
 
                viewModelScope.launch {
-                   poiUseCases.getPoiById(id = id)?.also { poi ->
-                       _poiState.value = poi
+                   if (id != -1){
+                       poiUseCases.getPoiById(id = id)?.also { poi ->
+                           _poiState.value = poi
+                       }
                    }
-
                }
-
        }
    }
 
