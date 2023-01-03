@@ -48,7 +48,7 @@ fun PoiListScreen(navController: NavController,
             }
         },
         content = {
-            NotesList(poiList = list.value, onNoteItemSelected =
+            PoiList(poiList = list.value, onNoteItemSelected =
                     {
                         navController.navigate(
                     Screen.DetailPoiScreen.route
@@ -60,8 +60,8 @@ fun PoiListScreen(navController: NavController,
 }
 
 @Composable
-fun NotesList(poiList: List<PoiDbEntity>,
-              onNoteItemSelected: (PoiDbEntity) -> Unit) {
+fun PoiList(poiList: List<PoiDbEntity>,
+            onNoteItemSelected: (PoiDbEntity) -> Unit) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = poiList) { poi ->
             PoiCard(poi = poi, onNoteItemSelected = onNoteItemSelected)
