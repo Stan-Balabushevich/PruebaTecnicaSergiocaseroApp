@@ -11,11 +11,11 @@ import androidx.room.RoomDatabase
     version = 1)
 abstract class PoiDatabase: RoomDatabase() {
 
-    abstract val noteDao: PoiDao
+    abstract val poiDao: PoiDao
 
     companion object{
 
-        private const val DATABASE_NAME = "poi_list_db"
+        const val DATABASE_NAME = "poi_list_db"
 
         @Volatile
         private var INSTANCE: PoiDatabase? = null

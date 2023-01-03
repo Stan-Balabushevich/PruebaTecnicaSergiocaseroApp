@@ -8,8 +8,6 @@ import id.slava.nt.pruebatecnicasergiocaseroapp.domain.repository.PoiRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.conflate
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 
 class PoiRepositoryImpl(private val poiDao: PoiDao): PoiRepository {
@@ -18,8 +16,6 @@ class PoiRepositoryImpl(private val poiDao: PoiDao): PoiRepository {
 
     override fun getPoiList(): Flow<List<PoiDbEntity>> =
         poiDao.getListPoi()
-            .flowOn(defaultDispatcher)
-            .conflate()
 
     override suspend fun getPoiById(id: Int): PoiDbEntity? =
         poiDao.getPoiById(id)
