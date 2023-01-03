@@ -20,8 +20,10 @@ class DetailPoiViewModel(
 
        savedStateHandle.get<Int>("poiId")?.let { id ->
 
+           if (id != -1){
+
                viewModelScope.launch {
-                   if (id != -1){
+
                        poiUseCases.getPoiById(id = id)?.also { poi ->
                            _poiState.value = poi
                        }

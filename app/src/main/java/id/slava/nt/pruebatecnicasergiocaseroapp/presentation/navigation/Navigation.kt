@@ -24,10 +24,10 @@ fun Navigation() {
         composable(
             route = Screen.DetailPoiScreen.route +
                     // if needs more arguments
-                    "?noteId={noteId}",
+                    "?poiId={poiId}",
             arguments = listOf(
                 navArgument(
-                    name = "noteId"
+                    name = "poiId"
                 ) {
                     type = NavType.IntType
                     defaultValue = -1
