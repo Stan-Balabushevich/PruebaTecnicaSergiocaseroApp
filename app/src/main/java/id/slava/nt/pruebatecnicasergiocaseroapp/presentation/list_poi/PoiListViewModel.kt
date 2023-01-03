@@ -29,4 +29,8 @@ class PoiListViewModel(private val poiUseCases: PoiUseCases): ViewModel() {
 
         }
     }
+
+    fun setSearchText(text: String) {
+
+    }
 }
