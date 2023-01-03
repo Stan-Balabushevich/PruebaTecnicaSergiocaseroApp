@@ -110,4 +110,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.3'
     implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
 
+    // loading images for compose
+    implementation "com.github.skydoves:landscapist-glide:2.1.0"
+
 }
