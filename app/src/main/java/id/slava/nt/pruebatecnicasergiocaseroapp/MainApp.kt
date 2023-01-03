@@ -32,7 +32,6 @@ class MainApp: Application() {
 
     }
 
-
     private fun setupRecurringWork() {
 
         val repeatingRequest =
