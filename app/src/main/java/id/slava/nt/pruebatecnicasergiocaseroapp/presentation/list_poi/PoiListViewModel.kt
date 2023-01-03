@@ -29,4 +29,16 @@ class PoiListViewModel(private val poiUseCases: PoiUseCases): ViewModel() {
 
         }
     }
+
+    fun setSearchText(text: String) {
+
+        viewModelScope.launch {
+
+            poiUseCases.searchPoi(text).collect{
+                _poiListState.value = it
+            }
+
+        }
+
+    }
 }
